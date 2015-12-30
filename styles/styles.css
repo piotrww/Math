@@ -9,6 +9,8 @@ form {
   form #result {
     border: 4px solid orange;
     min-height: 25px; }
+  form #calculate {
+    cursor: pointer; }
 
 @media handheld {
   body {

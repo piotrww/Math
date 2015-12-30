@@ -1,12 +1,9 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+    console.log( "ready!!!" );
 
 
 
-    var side = $( "input[name*='side']").val();
-
-    var side2 = $( "#aaa").val();
-
+    var myLength = $( "#myInput" ).val();
     var warning = $( "#warning" );
     var result = $( "#result" );
 
@@ -15,10 +12,15 @@ $( document ).ready(function() {
 
     $('#calculate').on('click', function(){
 
-            var resu = side * side;
-            return resu;
-        result.html(resu);
+       console.log("click!");
 
+       if (myLength < 0) {
+           warning.html("Please enter value bigger then 0");
+           console.log("Bad number (0 or smaller)");
+
+       } else {
+           console.log("good value");
+       }
 
     });
 
