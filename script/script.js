@@ -3,26 +3,37 @@ $( document ).ready(function() {
 
 
 
-    var myLength = $( "#myInput" ).val();
     var warning = $( "#warning" );
     var result = $( "#result" );
-
-
-
 
     $('#calculate').on('click', function(){
 
        console.log("click!");
+       var myLength = $( "#myInput" ).val();
 
-       if (myLength < 0) {
-           warning.html("Please enter value bigger then 0");
-           console.log("Bad number (0 or smaller)");
+            if (myLength < 1) {
+               warning.html("Please enter value 1 or bigger");
+             //  console.log("Please enter value 1 or bigger");
 
-       } else {
-           console.log("good value");
-       }
+            }   else if (myLength > 1000) {
+               warning.html("Are you sure? It is so big value.");
+             //  console.log("Are you sure? It is so big value.");
+
+            } else {
+               console.log("good value");
+            }
+
+        calculateGeometric (myLength);
 
     });
+
+
+    function calculateGeometric (myLength) {
+        var calcResult = Math.pow(myLength, 2);
+        console.log(myLength);
+        result.html(calcResult);
+
+    }
 
 
 
