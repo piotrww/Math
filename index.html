@@ -12,14 +12,18 @@
 </head>
 <body>
 
-<section class="A">
+
+
+<section class="row A grid-container">
     <!-- Figure 1, square-->
-    <div>
+    <div class="col-4">
+        <h2>Square</h2>
         <form>
             Enter length:<br>
             <input type="number" min=1 id="myInputA1">
-            <br>
+
             <div id="calculateA1">Calculate now!</div>
+            <p>d</p>
             <div> Result is:
                 <div id="resultA1"></div>
             </div>
@@ -30,12 +34,13 @@
 
     <!-- Figure 2, rectangle-->
 
-    <div>
-        <form>
-            Enter length of side a:<br>
+    <div class="col-4">
+        <h2>Rectangle</h2>
+        <p>
+            <p>Enter length of side a:</p>
             <input type="number" min=1 id="myInputA2">
-            <br>
-            Enter length of side b:<br>
+
+            <p>Enter length of side b:</p>
             <input type="number" min=1 id="myInputA2A">
             <div id="calculateA2">Calculate now!</div>
             <div> Result is:
@@ -48,12 +53,13 @@
     <!-- Figure 3, triangle-->
 
 
-    <div>
+    <div class="col-4">
+        <h2>Triangle</h2>
         <form>
-            Enter length of a base<br>
+            <p>Enter length of a base</p>
             <input type="number" min=1 id="myInputA3">
-            <br>
-            Enter length of attitude:<br>
+
+            <p>Enter length of attitude:</p>
             <input type="number" min=1 id="myInputA3A">
             <div id="calculateA3">Calculate now!</div>
             <div> Result is:
@@ -62,6 +68,142 @@
 
         </form>
     </div>
+
+
+
+</section>
+
+
+
+
+<section>
+
+
+
+
+    <div>
+        <form>
+            Enter length of side a<br>
+            <input type="number" min=1 id="myInputB1a">
+            <br>
+            Enter length of side b <br>
+            <input type="number" min=1 id="myInputB1b">
+
+            Enter length of attitude:<br>
+            <input type="number" min=1 id="myInputB1h">
+
+
+            <div id="calculateB1">Calculate now!</div>
+            <div> Result is:
+                <div id="resultB1"></div>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <div>
+        <form>
+            Enter length of side a<br>
+            <input type="number" min=1 id="myInputB2a">
+            <br>
+
+            Enter length of attitude:<br>
+            <input type="number" min=1 id="myInputB2h">
+
+
+            <div id="calculateB2">Calculate now!</div>
+            <div> Result is:
+                <div id="resultB2"></div>
+            </div>
+
+        </form>
+    </div>
+
+
+
+</section>
+
+
+
+
+<section>
+<!--sphere-->
+    <div>
+        <form>
+            Enter length of a radius<br>
+            <input type="number" min=1 id="myInputC1R">
+            <br>
+
+            <div id="calculateC1">Calculate now!</div>
+
+            <div> Result is:
+                <div id="resultC1"></div>
+            </div>
+
+        </form>
+    </div>
+
+<!--Cylinder-->
+
+    <div>
+        <form>
+
+            Enter length of a radius<br>
+            <input type="number" min=1 id="myInputC2R">
+            <br>
+
+
+            Enter length of a attitude<br>
+            <input type="number" min=1 id="myInputC2H">
+            <br>
+
+
+
+            <div id="calculateC2">Calculate now!</div>
+
+            <div> Result is:
+                <div id="resultC2"></div>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <!--Cubic-->
+
+    <div>
+        <form>
+
+            Enter length of a a<br>
+            <input type="number" min=1 id="myInputC3a">
+            <br>
+
+
+            Enter length of a b<br>
+            <input type="number" min=1 id="myInputC3b">
+            <br>
+
+
+            Enter length of a attitude (h)<br>
+            <input type="number" min=1 id="myInputC3h">
+            <br>
+
+
+
+
+            <div id="calculateC3">Calculate now!</div>
+
+            <div> Result is:
+                <div id="resultC3"></div>
+            </div>
+
+        </form>
+    </div>
+
+
 
 
 

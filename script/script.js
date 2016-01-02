@@ -6,136 +6,188 @@ $( document ).ready(function() {
   ////Section A
       //1. Square
 
+
+
     $('#calculateA1').on('click', function(){
 
-          var a = $("#myInputA1").val();
+        var result = $( "#resultA1" );
+        var a = $("#myInputA1").val();
 
-         calculateSquare (a);
+        if ( a == "" ) {
+            result.html('Input can not be left blank').addClass('warning');
 
+        } else {
+
+            result.html( Math.pow(a, 2)).removeClass('warning');
+        }
      });
 
 
-    function calculateSquare (a) {
-        var result = $( "#resultA1" );
 
-        result.html( Math.pow(a, 2) );
-    }
-
-
-
-
-//
-
-//
     //2. Rectangle
 
 
     $('#calculateA2').on('click', function(){
 
+
+        var result = $( "#resultA2" );
         var a = $("#myInputA2").val();
         var b = $("#myInputA2A").val();
 
-        calculateRectangle (a, b);
+        if ( a == "" || b == "") {
+            result.html('Input can not be left blank').addClass('warning');
+
+        }  else {
+
+            result.html( a * b).removeClass('warning');
+        }
+
 
     });
 
-
-    function calculateTriangle (a, h) {
-        var result = $( "#resultA2" );
-
-        result.html( a * b );
-    }
 
     //3. Triangle
 
 
     $('#calculateA3').on('click', function(){
 
+        var result = $( "#resultA3" );
         var a = $("#myInputA3").val();
         var h = $("#myInputA3A").val();
 
-        calculateTriangle (a, h);
+        if ( a == "" || h == "") {
+            result.html('Input can not be left blank').addClass('warning');
+
+        }  else {
+
+            result.html( 0.5 * a * h).removeClass('warning');
+        }
+
+
 
     });
 
 
-    function calculateTriangle (a, h) {
-        var result = $( "#resultA3" );
 
-        result.html( 0.5 * a * h );
+
+
+////SECTION B
+
+  // Figure 1
+
+    $('#calculateB1').on('click', function(){
+
+        console.log("klikb1");
+
+    var result = $( "#resultB1" );
+    var a = $("#myInputB1a").val();
+    var b = $("#myInputB1b").val();
+    var h = $("#myInputB1h").val();
+
+    if ( a == "" || b == "" || h == "") {
+        result.html('Input can not be left blank').addClass('warning');
+
+    }  else {
+
+        result.html( (0.5*h)*(a+b) ).removeClass('warning');
     }
 
+    });
 
 
 
+  // Figure 2, diamond
+
+    $('#calculateB2').on('click', function(){
+
+        console.log("klikb2");
+
+        var result = $( "#resultB2" );
+        var a = $("#myInputB2a").val();
+        var h = $("#myInputB2h").val();
+
+        if ( a == "" || h == "") {
+
+            result.html('Input can not be left blank').addClass('warning');
+
+        }  else {
+
+            result.html( a * h ).removeClass('warning');
+        }
+
+    });
+
+
+// SECTION 3
+
+    //Figure 1
+
+    $('#calculateC1').on('click', function(){
+
+        console.log("klikC1");
+
+        var result = $( "#resultC1" );
+        var r = $("#myInputC1R").val();
+
+        if ( r == "" ) {
+
+            result.html('Input can not be left blank').addClass('warning');
+
+        }  else {
+
+            result.html( 4*Math.PI*Math.pow(r, 2) ).removeClass('warning');
+        }
+
+    });
+
+
+    //Figure 2
+
+
+    $('#calculateC2').on('click', function(){
+
+        console.log("klikC2");
+
+        var result = $( "#resultC2" );
+        var r = $("#myInputC2R").val();
+        var h = $("#myInputC2H").val();
+
+
+        if ( r == "" || h == "") {
+
+            result.html('Input can not be left blank').addClass('warning');
+
+        }  else {
+
+            result.html( Math.PI*Math.pow(r,2)*h ).removeClass('warning');
+        }
+
+    });
+
+   //Figure 3
+
+
+    $('#calculateC3').on('click', function(){
+
+        console.log("klikC3");
+
+        var result = $( "#resultC3" );
+        var a = $("#myInputC3a").val();
+        var b = $("#myInputC3b").val();
+        var h = $("#myInputC3h").val();
 
 
 
+        if ( a == "" || b == "" || h == "") {
 
+            result.html('Input can not be left blank').addClass('warning');
 
+        }  else {
 
+            result.html( a*b*h ).removeClass('warning');
+        }
 
-
+    });
 
 
 });
-
-//
-////Calculate triangle
-//    function calculateTriangle (myLengthA, myAttitudeH) {
-//        var calcResult = (myLengthA * myAttitudeH)*0.5;
-//        console.log(myLength);
-//        result.html(calcResult);
-//
-//    }
-//
-////SECTION B
-//
-//
-//
-////Calculate trapeze
-//    function calculateTrapeze (a,b,h) {
-//        var calcResult = (0.5*h)*(a+b);
-//        console.log(calcResult);
-//        result.html(calcResult);
-//
-//    }
-//
-//
-////Calculate diamond
-//    function calculateDiamond (a, h) {
-//        var calcResult = a * h;
-//        console.log(myLength);
-//        result.html(calcResult);
-//
-//    }
-//
-//
-////SECTION C
-//
-//
-////Calculate sphere
-//    function calculateSphere (r) {
-//        var calcResult = 4*Math.PI*Math.pow(r, 2);
-//        result.html(calcResult);
-//
-//    }
-//
-//
-////Calculate cilinder
-//    function calculateCilinder (r,h) {
-//        var calcResult = Math.PI*Math.pow(r,2)*h;
-//        result.html(calcResult);
-//
-//    }
-//
-//
-////Calculate cuboid
-//    function calculateCircle (a,b,c) {
-//        var calcResult = a, b,c;
-//        result.html(calcResult);
-//
-//    }
-//
-//
-//});
