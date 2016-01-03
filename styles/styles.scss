@@ -1,6 +1,6 @@
 // RESET CSS
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin:0;
   padding:0;
   border:0;
@@ -9,13 +9,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align:baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display:block;
 }
 
 body {
   line-height:1;
+  background: url(http://lorempixel.com/400/200/sports) fixed;
 }
+
 
 ul, ol {
   list-style:none;
@@ -35,12 +37,42 @@ table {
   border-spacing:0;
 }
 
+//Font
 
+@font-face {
+  font-family: 'Lato-Black', 'Arial', sans-serif;
+  src: url('../fonts/Lato-Black.ttf');
 
-///
+}
+
+/// General
+
+body {
+   background: url('../images/zirkel.jpg');
+  background-size: 70%;
+
+}
+
 p {
   margin: 0;
 }
+
+
+//
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 0.2rem double whitesmoke;
+}
+
+#calculateA1, #calculateB2, #calculateC2  {
+  margin-top: 50px;
+}
+
+#calculateC1  {
+  margin-top: 100px;
+}
+
 
 div[id^="calculate"] {
   cursor: pointer;
@@ -49,7 +81,7 @@ div[id^="calculate"] {
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   border-radius: 18px;
   color: #ffffff;
-  margin-top: 10px;
+  margin: 0 auto;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
@@ -59,6 +91,7 @@ div[id^="calculate"] {
     text-decoration: none;
   }
 
+
 }
 
 
@@ -66,19 +99,17 @@ div[id^="calculate"] {
 div[id^="result"] {
   border: 4px solid orange;
   min-height: 25px;
+
 }
 
 .warning {
-  color: red;
+  color: white;
 
 }
 
-.A {
-  background-color: aqua;
 
-
-
-  form {
+form {
+    padding: 0 0.5rem 0 0.5rem;
 
 
     #warning {
@@ -87,49 +118,65 @@ div[id^="result"] {
     }
   }
 
-};
 
 
+//parallex
 
 
-
-
-
-
-.grid-container {
-  width : 100%;
-  max-width : 1200px;
-  box-sizing: border-box;
+#contLayer1 {
+  position: fixed;
+  background: url('../images/triangle.png') no-repeat 0 200px;
+  width: 100%;
+  height: 700px;
+  z-index: -1;
 }
 
-.row:after {
-  content: "";
-  clear: both;
-  display: block;
+#contLayer2 {
+  position: fixed;
+  background: url('../images/triangle.png') no-repeat 120px 400px;
+  width: 100%;
+  height: 1200px;
+  z-index: -1;
 }
-[class*="col-"] {
-  float: left;
-  min-height: 1px;
-  box-shadow: inset 0 0 0 2px antiquewhite;
-  //gutter
- // padding: 12px;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;
-        }
 
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
-.myWidth {
-  margin: 0 auto;
-  width: 90%;
+
+
+//FLEX
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+//  flex-flow: row wrap;
+  justify-content: center;
+
+
+  .flexItem {
+    border-radius: 10%;
+    background: tomato;
+    //padding: 50x;
+    //width: 200px;
+    //height: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+    //line-height: 150px;
+    color: white;
+    //font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.5rem;
+
+  }
+
 }
+
+
+
+
+
+
+
+

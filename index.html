@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
    <script src="script/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="script/script.js"></script>
+   <script type="text/javascript" src="script/script.js"></script>
 
 
     <meta charset="UTF-8">
@@ -12,18 +12,24 @@
 </head>
 <body>
 
+<article class="absoluteAll">
+    <div id="contLayer1">ff
+    </div>
+    <div id="contLayer2">ff
+    </div>
 
 
-<section class="row A grid-container">
+    <section class="flex-container">
     <!-- Figure 1, square-->
-    <div class="col-4">
+
+    <div class="flexItem">
         <h2>Square</h2>
         <form>
             Enter length:<br>
             <input type="number" min=1 id="myInputA1">
 
-            <div id="calculateA1">Calculate now!</div>
-            <p>d</p>
+            <div id="calculateA1" class="padding-top">Calculate now!</div>
+
             <div> Result is:
                 <div id="resultA1"></div>
             </div>
@@ -34,9 +40,9 @@
 
     <!-- Figure 2, rectangle-->
 
-    <div class="col-4">
+    <div class="flexItem">
         <h2>Rectangle</h2>
-        <p>
+        <form>
             <p>Enter length of side a:</p>
             <input type="number" min=1 id="myInputA2">
 
@@ -53,7 +59,7 @@
     <!-- Figure 3, triangle-->
 
 
-    <div class="col-4">
+    <div class="flexItem">
         <h2>Triangle</h2>
         <form>
             <p>Enter length of a base</p>
@@ -70,24 +76,25 @@
     </div>
 
 
-
 </section>
 
 
 
 
-<section>
+<section class="flex-container">
 
 
 
 
-    <div>
+    <div class="flexItem">
+        <h2>trapezoid</h2>
         <form>
             Enter length of side a<br>
             <input type="number" min=1 id="myInputB1a">
             <br>
             Enter length of side b <br>
             <input type="number" min=1 id="myInputB1b">
+            <br>
 
             Enter length of attitude:<br>
             <input type="number" min=1 id="myInputB1h">
@@ -103,7 +110,8 @@
 
 
 
-    <div>
+    <div class="flexItem">
+        <h2>diamond</h2>
         <form>
             Enter length of side a<br>
             <input type="number" min=1 id="myInputB2a">
@@ -125,12 +133,14 @@
 
 </section>
 
+<!--SECTION C-->
 
 
-
-<section>
+<section class="flex-container">
 <!--sphere-->
-    <div>
+
+    <div class="flexItem">
+        <h2>Sphere</h2>
         <form>
             Enter length of a radius<br>
             <input type="number" min=1 id="myInputC1R">
@@ -147,7 +157,8 @@
 
 <!--Cylinder-->
 
-    <div>
+    <div class="flexItem">
+        <h2>Cylinder</h2>
         <form>
 
             Enter length of a radius<br>
@@ -174,7 +185,8 @@
 
     <!--Cubic-->
 
-    <div>
+    <div class="flexItem">
+        <h2>Cubic</h2>
         <form>
 
             Enter length of a a<br>
@@ -203,12 +215,8 @@
         </form>
     </div>
 
-
-
-
-
 </section>
-
+</article>
 
 
 </body>

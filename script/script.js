@@ -73,7 +73,7 @@ $( document ).ready(function() {
 
 ////SECTION B
 
-  // Figure 1
+  // Figure 1, trapezoid
 
     $('#calculateB1').on('click', function(){
 
@@ -188,6 +188,17 @@ $( document ).ready(function() {
         }
 
     });
+//PARALER
+    function parralax() {
+        var prlxLayer1 = document.getElementById('contLayer1');
+        prlxLayer1.style.top = -(window.pageYOffset/8)+'px';
+
+        var prlxLayer2 = document.getElementById('contLayer2');
+        prlxLayer2.style.top = -(window.pageYOffset/2)+'px';
+
+    }
+
+    window.addEventListener("scroll", parralax, false);
+    });
 
 
-});
