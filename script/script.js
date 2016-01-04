@@ -191,7 +191,7 @@ $( document ).ready(function() {
 //PARALER
     function parralax() {
         var prlxLayer1 = document.getElementById('contLayer1');
-        prlxLayer1.style.top = -(window.pageYOffset/8)+'px';
+        prlxLayer1.style.top = -(window.pageYOffset*2)+'px';
 
         var prlxLayer2 = document.getElementById('contLayer2');
         prlxLayer2.style.top = -(window.pageYOffset/2)+'px';
