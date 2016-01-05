@@ -60,7 +60,54 @@ p {
 }
 
 
+
+// Slider od top
+
+
+
+.wrapper {
+  width: 1000px;
+  height: 300px;
+  overflow: hidden;
+
+
+      .allSlides {
+        display: block;
+        width: 6000px;
+        height: inherit;
+        margin-left: 0; /* to animujemy i na koniec powrót do 0.*/
+        padding: 0;
+
+
+          .slide {
+            float: left;
+            width: 1000px;
+            height: inherit;
+
+          }
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
+
 
 h2 {
   font-size: 1.5rem;
@@ -99,13 +146,14 @@ div[id^="calculate"] {
 
 
 div[id^="result"] {
-  border: 4px solid orange;
+ // border: 4px solid orange;
   min-height: 25px;
 
 }
 
 .warning {
-  color: white;
+  color: indianred;
+  font-weight: bolder;
 
 }
 
@@ -168,7 +216,7 @@ form {
     margin-top: 10px;
     margin-left: 10px;
     //line-height: 150px;
-    color: white;
+    color: black;
     //font-weight: bold;
     font-size: 1em;
     text-align: center;
@@ -177,11 +225,3 @@ form {
   }
 
 }
-
-
-
-
-
-
-
-

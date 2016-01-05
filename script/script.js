@@ -199,6 +199,47 @@ $( document ).ready(function() {
     }
 
     window.addEventListener("scroll", parralax, false);
-    });
+
+
+
+//SLIDER
+
+
+
+    var scrollSpeed = 4000;
+    var currentSlide = 1;
+
+
+
+    var $wrapper = $(".wrapper");
+    var $allSlides = $wrapper.find('.allSlides');
+    var $slide = $allSlides.find('.slide');
+
+
+    setInterval(function() {
+            $allSlides.animate(
+                {'margin-left': '-=1000px'},
+                2000,
+                function() {
+                    currentSlide++;//Ale czemu tu te¿, bo zlicza?
+
+                    if(currentSlide === $slide.length) {
+                        currentSlide = 1;
+                        $allSlides.css('margin-left', 0);
+                    }
+
+                });
+        },
+        scrollSpeed);
+
+
+
+
+
+
+
+});
+
+
 
 

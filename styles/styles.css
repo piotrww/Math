@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -38,6 +39,22 @@ body {
 p {
   margin: 0; }
 
+.wrapper {
+  width: 1000px;
+  height: 300px;
+  overflow: hidden; }
+  .wrapper .allSlides {
+    display: block;
+    width: 6000px;
+    height: inherit;
+    margin-left: 0;
+    /* to animujemy i na koniec powrˇt do 0.*/
+    padding: 0; }
+    .wrapper .allSlides .slide {
+      float: left;
+      width: 1000px;
+      height: inherit; }
+
 h2 {
   font-size: 1.5rem;
   border-bottom: 0.2rem double whitesmoke; }
@@ -64,11 +81,11 @@ div[id^="calculate"] {
     text-decoration: none; }
 
 div[id^="result"] {
-  border: 4px solid orange;
   min-height: 25px; }
 
 .warning {
-  color: white; }
+  color: indianred;
+  font-weight: bolder; }
 
 form {
   padding: 0 0.5rem 0 0.5rem; }
@@ -104,7 +121,7 @@ form {
     opacity: 0.9;
     margin-top: 10px;
     margin-left: 10px;
-    color: white;
+    color: black;
     font-size: 1em;
     text-align: center;
     line-height: 1.5rem; }
