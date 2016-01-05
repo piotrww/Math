@@ -221,7 +221,7 @@ $( document ).ready(function() {
                 {'margin-left': '-=1000px'},
                 2000,
                 function() {
-                    currentSlide++;//Ale czemu tu te¿, bo zlicza?
+                    currentSlide++;
 
                     if(currentSlide === $slide.length) {
                         currentSlide = 1;
